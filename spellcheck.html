@@ -21,29 +21,6 @@
         </div>
         <p><span>Thank you!</span></p>
     </div>
-    <div id="spellActions">
-        <button id="action1" onClick="spellCheckHTML('spellcheck1')">Spell Check HTML</button>
-        <button id="action2" onClick="spellCheckInput('name')">Spell Check Input</button>
-    </div>
 </body>
-
-<script>
-var dictionary=["The", "quick", "brown", "fox", "jumped", "over", "the", "fence", "and", "went", "through", "yard", "When", "Billy", "went", "to", "school", "he", "became", "smarter", "everyday", "Jordan", "worked", "at", "became", "a", "super", "star", "He", "made", "lots", "of", "cool", "applications", "One", "his", "best", "applications", "was", "one", "that", "could", "predict", "future", "Please", "tell", "us", "your", "name", "Name", "Thank", "you"];
-function spellCheckInput(string){
-    document.getElementById("spellResults").innerHTML="";
-    var input = spellCheck(string, dictionary, true);
-    if(input)
-        document.getElementById("spellResults").innerHTML="<b>Spelling errors within inputs: </b><span style='color:red'>"+ input + "</span>";
-    else
-        alert("No errors");
-}
-function spellCheckHTML(string){
-    document.getElementById("spellResults").innerHTML="";
-    var input = spellCheck(string, dictionary, false);
-    if(input)
-        document.getElementById(string).innerHTML=input;
-    else
-        alert("No errors");
-}
-</script>
+<script>spellCheck("spellcheck1",false);</script>
 </html>
